@@ -293,9 +293,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         padding-top: 150px;
         padding-bottom: 100px;
         color: white;
-        background: #087cf9;
-        background: -webkit-linear-gradient(to left, #087cf9, #37dbf5);
-        background: linear-gradient(to left, #087cf9, #37dbf5);
+        background: #ed1b2e;
     }
 
     section.masthead .header-content {
@@ -486,7 +484,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 ======================================================*/
 
     .our-process {
-        background: #f0f0f0;
+        background: #f8f8f8;
     }
 
     .our-process .servie-img {
