@@ -368,19 +368,15 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
     .app-about img.first {
         margin-top: 50px;
-        box-shadow: 2px 3px 14px 0px rgba(70, 68, 68, 0.45);
         margin-left: 150px;
         opacity: 0.6;
         width: 80%;
-        border-radius: 10px;
     }
 
     .app-about img.second {
         position: absolute;
         top: 0;
         width: 100%;
-        box-shadow: 4px 4px 10px 2px rgba(70, 68, 68, 0.58);
-        border-radius: 10px;
     }
 
     .app-about .app-about-cont {
