@@ -439,18 +439,14 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         .app-about img.first {
             margin-top: 30px;
             margin-left: 35%;
-            box-shadow: 2px 3px 14px 0px rgba(70, 68, 68, 0.45);
             opacity: 0.6;
             width: 50%;
-            border-radius: 10px;
         }
         .app-about img.second {
             position: absolute;
             top: 0;
             left: 15%;
             width: 50%;
-            box-shadow: 4px 4px 10px 2px rgba(70, 68, 68, 0.58);
-            border-radius: 10px;
         }
         .app-about .app-about-cont {
             margin: 80px auto;
