@@ -19,7 +19,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
     }
 
     a {
-        color: #ed1b2e;
+        color: #ed1b2e !important;
     }
 
     a:hover {
@@ -639,7 +639,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         color: #adb5bd;
     }
 
-    
+
 @media (min-width: 768px) {
 .carousel-multi-item-2 .col-md-3 {
 float: left;
@@ -695,7 +695,8 @@ a.cssbox_next {
 
 a.cssbox_close {
   top: 1%;
-  right: 1%
+  right: 1%;
+     margin-top: 90px;
 }
 
 a.cssbox_close::after {
