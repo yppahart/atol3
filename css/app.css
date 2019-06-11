@@ -646,6 +646,9 @@ max-width: 100%; } }
 
 .carousel-multi-item-2 .card img {
 border-radius: 2px; }
+.carousel-item.active, .carousel-item-next, .carousel-item-prev {
+    display: -webkit-inline-box;
+    }
 
 /*====================================================
                       FOOTER
