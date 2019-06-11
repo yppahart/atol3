@@ -638,7 +638,14 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         text-align: center;
         color: #adb5bd;
     }
+@media (min-width: 768px) {
+.carousel-multi-item-2 .col-md-3 {
+float: left;
+width: 25%;
+max-width: 100%; } }
 
+.carousel-multi-item-2 .card img {
+border-radius: 2px; }
 
 /*====================================================
                       FOOTER
