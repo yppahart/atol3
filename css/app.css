@@ -187,7 +187,7 @@
     }
 
     #mainNav .navbar-brand img {
-        max-height: 45px;
+        max-height: 65px;
     }
 
     #mainNav .navbar-nav .nav-item .nav-link {
@@ -205,7 +205,7 @@
             -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
             transition: padding-top 0.3s, padding-bottom 0.3s;
             border: none;
-            background-color: transparent;
+            background-color: black;
         }
         #mainNav .navbar-brand {
             font-size: 2.15em;
@@ -293,7 +293,7 @@
     section.masthead .device-mockup.iphone6_plus.portrait.white>.device,
     section.masthead .device-mockup.iphone6_plus.white>.device {
         margin: 90px 0 0 0;
-        width: 270px;
+        width: 500px;
         height: 550px;
     }
 
