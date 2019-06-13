@@ -1,503 +1,742 @@
-<!--
-author: Boostraptheme
-author URL: https://boostraptheme.com
-License: Creative Commons Attribution 4.0 Unported
-License URL: https://creativecommons.org/licenses/by/4.0/
--->
+    body {
+        overflow-x: hidden;
+        font-family: 'Lato', sans-serif;
+    }
 
-<!DOCTYPE html>
-<html class="no-js" prefix="og: http://ogp.me/ns#"  lang="RU">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Тахографы АТОЛ</title>
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    p {
+        line-height: 1.75;
+    }
 
-        <meta name="description" content="Заказать тахографы от официального представителя АТОЛ с установкой." /> 
-        <link href="img/Logo-NEW-alpha-1.png" rel="apple-touch-icon" sizes="96x96">
-        <link href="img/Logo-NEW-alpha-1.png" rel="icon" sizes="96x96" type="image/png">
-        <link href="img/Logo-NEW-alpha-1.png" rel="icon" sizes="32x32" type="image/png">
-        <meta content="img/Logo-NEW-alpha-1.png" name="msapplication-TileImage">
-        
-        <meta property="og:title" content="Тахографы АТОЛ" />
-        <meta property="og:locale" content="RUU" /> 
-        <meta property="og:site_name" content="Тахографы АТОЛ" />
-        <meta name="twitter:card" content="Тахографы АТОЛ" />
-        <meta name="twitter:site" content="Тахографы АТОЛ" />
-        <meta name="twitter:creator" content="Тахографы АТОЛ" />
+    a {
+        color: #ed1b2e;
+    }
 
-        <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
-        <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/animate.min.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/app.css">
+    a:hover {
+        color: #0cceed;
+    }
 
-        <script src="js/jquery.min.js"></script>
-        <script> $(window).on('load', function(){ $(".loader").fadeOut(2000); }); </script>
+    .text-primary {
+        color: #ed1b2e !important;
+    }
 
-    </head>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 700;
+        font-family: 'Lato', sans-serif;
+    }
 
-    <body>
+    section {
+        padding: 100px 0;
+    }
 
-        <div class="loader"></div>
-        <!-- NAVIGATION 
-            ==============-->
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-              <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="index.html#home"><img src="img/Logo-NEW-alpha-1.png" alt="" class="img-fluid"></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                  Меню
-                  <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                  <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link js-scroll-trigger" href="#models">Модели</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>  
+    section h2.section-heading {
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
 
-        <!--APP HEADER
-            ================--> 
-            <section class="masthead" style="background-image: url(img/truck-avto.png);">
-              <div class="container h-100">
-                <div class="row h-100">
-                  <div class="col-lg-7 my-auto">
-                    <div class="header-content mx-auto  animated wow zoomIn" data-wow-duration="0.3s" data-wow-delay=".1s">
-                      <h1 class="mx-auto">Отличный тахограф завтра бесплатно!</h1>
-                      <a href="#download"><button  class="btn btn-white mt-4 py-2 px-3 ">Заказать <i class="fas fa-arrow-alt-circle-down"></i></button></a>
-                    </div>
-                  </div>
-                  <div class="col-lg-5 my-auto">
-                    <div class="device-container">
-                      <div class="device-mockup iphone6_plus portrait white animated wow bounceInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                        <div class="device">
-                          <div class="screen">
-                            <img src="img/app/Drive-Smart-face.png" class="img-fluid" alt="">
-                          </div>
-                          <div class="button">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <div class="bg-banner-img">
-              <!-- <img src="img/bg-curve.png" alt=""> -->
-            </div>
+    section h3.section-subheading {
+        font-size: 16px;
+        font-weight: 400;
+        font-style: italic;
+        margin-bottom: 75px;
+        text-transform: none;
+        font-family: 'Lato', sans-serif;
+    }
 
-        <!-- APP ABOUT    
-            ================-->
+    @media (min-width: 768px) {
+        section {
+            padding: 150px 0;
+        }
+    }
 
-            <section id="app-about" class="app-about"> 
-              <div class="container">
-                                                <div class="col-md-12 text-center">
-                                     <div class="heading">
-            <h3> <a name="models"> Модели тахографов АТОЛ Drive </a></h3>
-          </div>
-                <div class="row first">
-                  <div class="col-md-4 wow flipInX" data-wow-delay="0.3s">
-                    <img src="img/app/Drive-Smart-face.png" alt="" class="second img-fluid">
-                  </div> 
-                  <div class="col-md-6 m-auto wow fadeInRight" data-wow-delay="0.6s">
-                    <div class="app-about-cont">
-                      <i class="fas fa-digital-tachograph"></i>
-                      <h3>АТОЛ Drive 5</h3>
-                      <p>Есть возможность подключить GSM-модуль расширения для контроля топлива и терминалы ЭРА-ГЛОНАСС. Интеграция с 9 модулями от сторонних разработчиков (Локарус, СпейсТим, ТехноКом, СКАУТ, Fort Telecom, Микро Лайн и др.). Антенны ГЛОНАСС и GPS-датчики можно подключить через разъем FAKRA. Выгрузка данных через USB-флешку. </p>
-                    </div>
-                  </div>
-                </div> 
-                <div class="row second"> 
-                  <div class="col-md-6 m-auto wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="app-about-cont right">
-                      <i class="fas fa-digital-tachograph"></i>
-                      <h3>АТОЛ Drive Smart без модуля расширения</h3>
-                      <p>Новинка 2015 года с усовершенствованным диспелеем, имеющим более широкий угол обзора, и эргономикой, упростившей использование устройства. Максимально низкое энергопотребление - не более 0,2 Вт в режиме энергосбережения. Устанавливается на все модели автомобилей: от старых, снятых с производства, до совсем недавно выпущенных, причем, как иностранных, так и российского производства.  </p>
-                    </div>
-                  </div>
-                  <div class="col-md-4 wow flipInX" data-wow-delay="0.6s">
-                                <img src="img/img-modified.jpg" alt="" class="fourth img-fluid">
-                  </div> 
-                </div> 
-                                <div class="row first">
-                  <div class="col-md-4 wow flipInX" data-wow-delay="0.3s">
-                    <img src="img/img-original.jpg" alt="" class="second img-fluid">
-                  </div> 
-                  <div class="col-md-6 m-auto wow fadeInRight" data-wow-delay="0.6s">
-                    <div class="app-about-cont">
-                      <i class="fas fa-digital-tachograph"></i>
-                      <h3>АТОЛ Drive Smart с модулем расширения</h3>
-                      <p>Данные в формате DDD можно выгружать в приложение ATOL DriveMobile на любой смартфон на Android по каналу Bluetooth. Подключение датчков топлива и вывод информации. Отправка информации о местоположении автомобиля. Подключение тревожной кнопки и экстренной голосовой связи с водителем. </p>
-                    </div>
-                  </div>
-                </div> 
-              </div>
-            </section>
+    .btn {
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+    }
 
-        <!-- OUR PROCESS    
-            ================-->
-            <section id="our-process" class="our-process"> 
-              <div class="container">   
-                <div class="row mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-md-12 text-center">
-                        <div class="heading">
-                            <h4>Преимущества тахографов АТОЛ</h4>
-                            <div class="bord-bot"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4 wow fadeInLeft" data-wow-delay="0.3s">
-                    <div class="col-md-12 col-sm-12">
-                      <div class="service-desc-cont">
-                    <i class="fas fa-paint-brush"></i>
-                        <h5>10 цветов диспелея</h5>
-                        <p>10 цветовых решений подсветки дисплея, которые устанавливает водитель </p>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                      <div class="service-desc-cont">
-                        <i class="fas fa-fire-alt"></i>
-                        <h5>Допущены для автомобилей, перевозящих опасные грузы</h5>
-                        <p>Тахографы защищены от взрыва и имеют сертификат, подтверждающий соответствие требованиям ДОПОГ </p>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                      <div class="service-desc-cont mb-5">
-              <i class="fas fa-clock"></i>
-                        <h5>Поддерживают правило одной минуты</h5>
-                        <p> Появилось на современных цифровых тахографах и позволяет засчитать короткие остановки (например, в пробке) как отдых.</p>
-                      </div>
-                    </div> 
-                  </div>
-                  <div class="col-md-4 wow bounceInUp" data-wow-delay="0.6s">
-                    <div class="servie-img text-center">
-                      <img src="img/DriveSmart-backend.png" alt="" class="img-fluid">
-                    </div>
-                  </div>
-                  <div class="col-md-4 wow fadeInRight" data-wow-delay="0.9s">
-                    <div class="col-md-12 col-sm-12">
-                      <div class="service-desc-cont">
-                     <i class="fas fa-file-signature"></i>
-                        <h5>Отвечает всем требованиям российского законодательства</h5>
-                        <p>Тахографы внесены в реестр Росавтотрнаса, имеется лицензия на разрботку СКЗИ</p>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                      <div class="service-desc-cont">
-                         <i class="fas fa-sim-card"></i>&nbsp&nbsp<i class="fas fa-sim-card"></i>
-                        <h5>Есть слоты для двух СИМ-карт</h5>
-                        <p>GSM-модуль позволяет использовать две СИМ-карты, за счет чего можно менять операторов связи в зависимости от ситуации </p>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12">
-                      <div class="service-desc-cont">
-          <i class="fas fa-exchange-alt"></i>
-                        <h5>Простая замена СКЗИ и батарейки</h5>
-                        <p> В отличие от большинства тахографов, модели АТОЛ не требуют полного вскрытия: СКЗИ и батарейка находятся в легкодоступных отсеках. </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-  </div> 
-              </div>
-            </section>    
+    .btn-xl {
+        font-size: 18px;
+        padding: 20px 40px;
+    }
 
-        <!-- FAQ    
-            ================-->
-            <section id="faq" class="faq py-5">
-                   <div class="container">
-                                    <div class="heading">
-                                      <div class="col-md-12 text-center">
-                           <h3>Вопросы по законодательству, связанные с тахографами</h3>
-                         </div>
-                         </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="faq-img">
-                      <img src="img/heart-law.png" alt="" class="img-fluid">
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-sm-12 wow fadeInUp mt-5 mx-auto" data-wow-delay="0.6s">
-                    <div class="faq-cont">
-                        <div id="accordion">
-                          <div class="card">
-                            <div class="card-header" id="headingOne">
-                              <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                  <i class="fa fa-arrow-right"></i>
-                                  Должны ли физ. лица устанавливать тахогрф? 
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                              <div class="card-body">
-                                С 1 ноября 2019 года, согласно п.3, ст.20 ФЗ «О безопасности дорожного движения», физ. лица, эксплатирующие автомобили массой свыше 3,5 т. обязаны оснащать автомобили тахографами и соблюдать нормы труда и отдыха, согласно ПДД. Исключение сделано для сельхоз-, спецтехники, пожарных, медицинских и военных автомобилей, а также для транспорта ряда спецслужб и техники возрастом старше 30 лет, не осуществляющей коммерческую деятельность. 
+    .btn-primary {
+        background-color: #ed1b2e;
+        border-color: #ed1b2e;
+    }
 
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingTwo">
-                              <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                  <i class="fa fa-arrow-right"></i>
-                                  Что такое блок СКЗИ?  
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                              <div class="card-body">
-СКЗИ расшифровывается как средство криптографической защиты информации. Он необходим он для защиты информации от корректировок и определения цифровой подписи. Блок СКЗИ тахографа, как и все подобные устройства, может производить компания имеющая специальное разрешение ФСБ. То же относится и к мастерским - они обязаны иметь лицензия на установку оборудования с СКЗИ. 
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingThree">
-                              <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  <i class="fa fa-arrow-right"></i>
-Какой штраф полагается при отсутствии тахографов?
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                              <div class="card-body">
-Если у тахограф не исправен, не установлен или не соответствует требованиям Минтранса (например, отсуствие блока СКЗИ), то согласно Статье 11.23 КоАП РФ физическое лицо - непосредственно водитель - заплатит от 1 до 3 тыс. руб, а штраф организации при этом составит от 5 до 10 тыс. Но в Госдуме на рассмотрении поправки к законопроекту, согласно которым штраф для физлиц может составить теперь от 50 до 100 тыс. 
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-header" id="headingThree">
-                              <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFourth" aria-expanded="false" aria-controls="collapseThree">
-                                  <i class="fa fa-arrow-right"></i>
-Требуется ли тахографу обслуживание? 
-                                </button>
-                              </h5>
-                            </div>
-                            <div id="collapseFourth" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                              <div class="card-body">
-Да, каждые три года необходимо менять блок СКЗИ, батарейку и проводить настройку (калибровку) устройства. 
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                </div>   
-                </div>
-              </div>
-            </section>
+    .btn-primary:active,
+    .btn-primary:focus,
+    .btn-primary:hover {
+        background-color: #13d4f3 !important;
+        border-color: #13d4f3 !important;
+        color: white;
+    }
 
-        <!-- REWIEWS    
-            ================-->
-            <section id="gallery" class="gallery">
-              <div class="container">
-                <div class="row mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-md-12 text-center">
-                        <div class="heading">
-                            <h3>Отзывы о тахографе</h3>
-                            <div class="bord-bot"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <div id="gallery-slider" class="owl-carousel owl-theme">
-                      <div class="gallery-img">
-                        <img src="img/rewiew1.jpg" alt="" class="img-fluid">
-                      </div> 
-                      <div class="gallery-img">
-                        <img src="img/rewies3.png" alt="" class="img-fluid">
-                      </div> 
-                      <div class="gallery-img">
-                        <img src="img/rewies4.png" alt="" class="img-fluid">
-                      </div> 
-                      <div class="gallery-img">
-                        <img src="img/rewies5.png" alt="" class="img-fluid">
-                      </div> 
-                                                                 </div>
-                  </div>
-                </div>
-              </div>
-            </section> 
-        
-        <!-- DOWNLOAD APP    
-            ================-->
-            <section id="download" class="download-app pb-0">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-12 text-center mb-4">
-                    <h2>Закажите тахограф у официального представителя в Уфе</h2>
-                    <p>На этой недели в БТС цены снижены на 1%</p>
-                    <!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<div id="mc_embed_signup">
-<form action="https://facebook.us9.list-manage.com/subscribe/post?u=e7d00907d42a1354529373461&amp;id=117e1863d9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-  <h2>Заявка на тахографы</h2>
-<div class="indicates-required"><span class="asterisk">*</span> обязательное поле</div>
-<div class="mc-field-group">
-  <label for="mce-EMAIL">Email <span class="asterisk">*</span>
-</label>
-  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group">
-  <label for="mce-FNAME">Имя </label>
-  <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-</div>
-<div class="mc-field-group">
-  <label for="mce-LNAME">Организация </label>
-  <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-</div>
-  <div id="mce-responses" class="clear">
-    <div class="response" id="mce-error-response" style="display:none"></div>
-    <div class="response" id="mce-success-response" style="display:none"></div>
-  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;" aria-hidden="true; background-color: #ed1b2f"><input type="text" name="b_e7d00907d42a1354529373461_117e1863d9" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Отправить" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text'; /*
- * Translated default messages for the $ validation plugin.
- * Locale: RU
- */
-$.extend($.validator.messages, {
-        required: "Это поле необходимо заполнить.",
-        remote: "Пожалуйста, введите правильное значение.",
-        email: "Пожалуйста, введите корректный адрес электронной почты.",
-        url: "Пожалуйста, введите корректный URL.",
-        date: "Пожалуйста, введите корректную дату.",
-        dateISO: "Пожалуйста, введите корректную дату в формате ISO.",
-        number: "Пожалуйста, введите число.",
-        digits: "Пожалуйста, вводите только цифры.",
-        creditcard: "Пожалуйста, введите правильный номер кредитной карты.",
-        equalTo: "Пожалуйста, введите такое же значение ещё раз.",
-        accept: "Пожалуйста, выберите файл с правильным расширением.",
-        maxlength: $.validator.format("Пожалуйста, введите не больше {0} символов."),
-        minlength: $.validator.format("Пожалуйста, введите не меньше {0} символов."),
-        rangelength: $.validator.format("Пожалуйста, введите значение длиной от {0} до {1} символов."),
-        range: $.validator.format("Пожалуйста, введите число от {0} до {1}."),
-        max: $.validator.format("Пожалуйста, введите число, меньшее или равное {0}."),
-        min: $.validator.format("Пожалуйста, введите число, большее или равное {0}.")
-});}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
-                  </div>
-              </div>
-            </section> 
-            <section id="our-process" class="our-process">
-              <div class="container">
-                  <div class="row mb-5 wow fadeInUp" data-wow-delay="0.3s">
-      <div class="col-md-12 text-center">
-                        <div class="heading">
-<h3><a name="sertificate">Лицензии и сертификаты АТОЛ ДРАЙВ</a></h3>
-<div class="bord-bot"></div>
-</div>
-</div>
-<div class="cssbox">
-  <a id="image1" href="#image1">
-    <img class="cssbox_thumb" src="img/about1-tb.jpg">
-    <span class="cssbox_full">
-          <img class="img-fluid" src="img/about1.jpg">
-     </span>
-  </a>
-  <a class="cssbox_close" href="#sertificate"></a>
-  <a class="cssbox_next" href="#image2">&gt;</a>
-</div>
+    .btn-primary:active,
+    .btn-primary:focus {
+        box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
+    }
 
-<div class="cssbox">
-  <a id="image2" href="#image2">
-    <img class="cssbox_thumb" src="img/rosavtotrans-tb.jpg">
-    <span class="cssbox_full">
-        <img class="img-fluid" src="img/rosavtotrans.jpg">
-                               </span>
-  </a>
-  <a class="cssbox_close" href="#sertificate"></a>
-        <a class="cssbox_prev" href="#image1">&lt;</a>
-        <a class="cssbox_next" href="#image3">&gt;</a>
-</div>
+    ::-moz-selection {
+        background: #ed1b2e;
+        text-shadow: none;
+    }
 
-<div class="cssbox">
-  <a id="image3" href="#image3">
-    <img class="cssbox_thumb" src="img/Page_00001-tb.jpg">
-    <span class="cssbox_full">
-          <img class="img-fluid" src="img/Page_00001.jpg"
-            alt="">
-                                             </span>
-  </a>
-  <a class="cssbox_close" href="#sertificate"></a>
-  <a class="cssbox_prev" href="#image2">&lt;</a>
-</div>
-</div>
-</div>
-</section>
+    ::selection {
+        background: #ed1b2e;
+        text-shadow: none;
+    }
+
+    img::selection {
+        background: transparent;
+    }
+
+    img::-moz-selection {
+        background: transparent;
+    }
+
+    .loader {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url("../img/loading.gif") 50% 50% no-repeat #f9f9f9;
+        opacity: .9;
+    }
 
 
-               <!-- CONTACT 
-                            ================-->
+/*====================================================
+                  BUTTON (Generic)
+======================================================*/
 
-                        <section id="gallery" class="gallery">
-              <div class="container">
-                <div class="row mb-5 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="col-md-12 text-center">
-                        <div class="heading">
-                            <h3> <a name="contact"> Наш адрес:</a></h3>
-                            <p>г. Уфа, Маршала Жукова 28, офис 203</p>
-                            <p> телефон:<a href="tel:+7 (963) 236 08 08"> +7 (963) 236 08 08 </a></p>
-                              <p> <a href="mailto:bts02@mail.ru">bts02@mail.ru </a> </p>
-            <iframe src="https://yandex.ru/map-widget/v1/-/CCGMBJja" width="1120" height="400" frameborder="1" allowfullscreen="true"></iframe>
-            <div class="form-row text-center">
-                                     <button type="button" class="btn btn-danger btn-lg">подробнее на сайте производителя</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+    .btn-general {
+        background-color: transparent;
+        text-align: center;
+        border-width: 1px;
+        font-size: 16px;
+        padding: 10px 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: 'Lato', sans-serif;
+    }
 
-        <!-- FOOTER 
-            ==============-->
-            <footer id="footer" class="footer">
-              <div class="container-fluid">
-                <div class="row top-footer">
-                  <div class="col-md-12 text-center">
-                    <p>Copyrights &copy; 2018 АТОЛ Drive</p>
-                  </div> 
-                </div> 
-              </div>
-            </footer>
+    .btn-white {
+        border-color: #ed1b2e;
+        background-color: #ed1b2e;
+        color: #fff;
+    }
 
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/owl.carousel.min.js"></script>
-        <script src="js/wow.min.js"></script>        
-        <script src="js/app.js"></script>
-               <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
-        <!--End of Tawk.to Script-->
-    </body>
-</html>
+    .btn-white:hover,
+    .btn-white:focus {
+        background-color: transparent;
+        color: #ed1b2e;
+        cursor: pointer;
+    }
+
+    .btn-greenish-blue {
+        border-color: #ed1b2e;
+        color: #ed1b2e;
+    }
+
+    .btn-greenish-blue:hover,
+    .btn-greenish-blue:focus {
+        background-color: #ed1b2e;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .heading-border {
+        width: 100px;
+        height: 5px;
+        background-color: #ed1b2e;
+        margin: 0 auto 20px auto;
+    }
+
+    .heading-border-light {
+        width: 30px;
+        height: 5px;
+        background-color: #ed1b2e;
+        margin: 0 0 20px 0;
+    }
+
+
+/*====================================================
+                      NAVBAR
+======================================================*/
+
+    #mainNav {
+        background-color: #212529;
+    }
+
+    #mainNav .navbar-toggler {
+        font-size: 12px;
+        right: 0;
+        padding: 13px;
+        text-transform: uppercase;
+        color: white;
+        border: 0;
+        background-color: #ed1b2e;
+        font-family: 'Lato', sans-serif;
+    }
+
+    #mainNav .navbar-brand img {
+        max-height: 65px;
+    }
+
+    #mainNav .navbar-nav .nav-item .nav-link {
+        font-size: 90%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        letter-spacing: 1px;
+        color: white;
+    }
+
+    @media (min-width: 992px) {
+        #mainNav {
+            padding-bottom: 25px;
+            -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+            -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+            transition: padding-top 0.3s, padding-bottom 0.3s;
+            border: none;
+            background-color: black;
+        }
+        #mainNav .navbar-brand {
+            font-size: 2.15em;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        #mainNav .navbar-nav .nav-item .nav-link {
+            padding: 1.1em 1em !important;
+            font-family: 'Roboto', sans-serif;
+        }
+        #mainNav.navbar-shrink {
+            padding-top: 0;
+            padding-bottom: 0;
+            background-color: #f8f9fa;
+            box-shadow: 0px 1px 5px 1px rgba(179, 174, 174, 0.5);
+        }
+        #mainNav.navbar-shrink .navbar-brand {
+            font-size: 1.55em;
+            padding: 12px 0;
+        }
+        #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+            font-size: 80%;
+            font-weight: 600;
+            padding: 0.75em 0;
+            letter-spacing: 0px;
+            color: #6c757d;
+            font-family: 'Roboto', sans-serif;
+        }
+        #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link a {
+            font-size: 14px;
+        }
+        #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link.active,
+        #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+            color: #ed1b2e;
+        }
+    }
+
+
+/*====================================================
+                      heading
+======================================================*/
+
+    section .heading {
+        margin-bottom: 30px;
+    }
+
+    section .heading h1 {
+        color: #6c757d;
+    }
+
+    section .heading .bord-bot {
+        width: 80px;
+        margin: 0 auto;
+        border-bottom: 7px solid #ed1b2e;
+    }
+
+    section .heading p {
+        margin-top: 10px;
+        color: #6c757d;
+        max-width: 400px;
+        margin: 20px auto;
+    }
+
+
+/*====================================================
+                        MASTHEAD
+======================================================*/
+
+    section.masthead {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-top: 150px;
+        padding-bottom: 100px;
+        color: white;
+        background-image: url(img/truck-avto.jpg);
+    }
+
+    section.masthead .header-content {
+        max-width: 500px;
+        text-align: center;
+    }
+
+    section.masthead .device-mockup.iphone6_plus.portrait.white>.device,
+    section.masthead .device-mockup.iphone6_plus.white>.device {
+        margin: 90px 0 0 0;
+        width: 500px;
+        height: 550px;
+    }
+
+    section.masthead .header-content h1 {
+        font-size: 30px;
+    }
+
+    section.masthead .device-container {
+        max-width: 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    section.masthead .device-container .screen img {
+        border-radius: 3px;
+    }
+
+    .bg-banner-img img {
+        position: absolute;
+        width: 100%;
+        margin-top: -50%;
+    }
+
+    @media (min-width: 992px) {
+        section.masthead {
+            height: 100vh;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        section.masthead .header-content {
+            margin-bottom: 0;
+            text-align: left;
+        }
+        section.masthead .header-content h1 {
+            font-size: 40px;
+            font-weight: 700;
+            margin: auto;
+        }
+        section.masthead .device-container {
+            max-width: 325px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        section.masthead .device-mockup.iphone6_plus.portrait.white>.device,
+        section.masthead .device-mockup.iphone6_plus.white>.device {
+            margin: 50px 0 0 0;
+            width: 270px;
+            height: 550px;
+        }
+    }
+
+
+/*====================================================
+                        ABOUT
+======================================================*/
+
+    .app-about .row.first {
+    }
+
+    .app-about img.first {
+        margin-top: 50px;
+        margin-left: 150px;
+        opacity: 0.6;
+        width: 80%;
+    }
+
+    .app-about img.second {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .app-about .app-about-cont {
+        margin-left: 150px;
+    }
+
+    .app-about .app-about-cont i {
+        font-size: 20px;
+        margin-bottom: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 50%;
+        height: 38px;
+        width: 38px;
+        line-height: 38px;
+        text-align: center;
+        box-shadow: 0px 0px 14px -1px rgba(101, 99, 99, 0.35);
+        color: #ed1b2e;
+    }
+
+    .app-about .app-about-cont h3 {
+        color: #6c757d;
+    }
+
+    .app-about .app-about-cont p {
+        color: #adb5bd;
+    }
+
+    .app-about img.third {
+        margin-top: 50px;
+        box-shadow: 2px 3px 14px 0px rgba(70, 68, 68, 0.45);
+        margin-left: -100px;
+        opacity: 0.6;
+        width: 80%;
+        border-radius: 10px;
+    }
+
+    .app-about img.fourth {
+        position: inherit;
+        top: 0;
+        width: 100%;
+        margin-left: auto;
+    }
+
+    .app-about .app-about-cont.right {
+        margin-left: 0;
+        margin-right: 150px;
+        text-align: right;
+    }
+
+    @media (max-width: 767px) {
+        .app-about .row.first {
+            margin-bottom: 0px;
+        }
+        .app-about img.first {
+            margin-top: 30px;
+            margin-left: 35%;
+            opacity: 0.6;
+            width: 50%;
+        }
+        .app-about img.second {
+            position: absolute;
+            top: 0;
+            left: 15%;
+            width: 50%;
+        }
+        .app-about .app-about-cont {
+            margin: 80px auto;
+        }
+        .app-about .app-about-cont.right {
+            margin-left: 0;
+            margin: 50px auto;
+            text-align: right;
+        }
+        .app-about img.third {
+            margin-top: 50px;
+            box-shadow: 2px 3px 14px 0px rgba(70, 68, 68, 0.45);
+            margin-left: 20%;
+            opacity: 0.6;
+            width: 50%;
+            border-radius: 10px;
+        }
+        .app-about img.fourth {
+            position: absolute;
+            top: 0;
+            margin-left: -25%;
+            width: 50%;
+        }
+    }
+
+
+/*====================================================
+                      PROCESS
+======================================================*/
+
+    .our-process {
+        background: #f8f8f8;
+    }
+
+    .our-process .servie-img {
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .our-process .service-desc-cont {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .our-process .service-desc-cont i {
+        font-size: 25px;
+        color: #ed1b2e;
+        margin-bottom: 10px;
+    }
+
+    .our-process .service-desc-cont h5 {
+        font-size: 18px;
+        text-transform: none;
+        color: #6c757d;
+    }
+
+    .our-process .service-desc-cont p {
+        color: #adb5bd;
+    }
+
+
+/*====================================================
+                      FAQ
+======================================================*/
+
+    .faq .card {
+        background: transparent;
+    }
+
+    .faq .card .card-header {
+        background: #ed1b2e;
+    }
+
+    .faq .card .card-header h5 button {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .faq .card .card-header h5 button i.fa-btc {
+        position: absolute;
+        right: 2px;
+        font-size: 25px;
+        padding: 4px 20px;
+        background: #fff;
+        line-height: 50px;
+        top: 2px;
+        color: #ed1b2e;
+    }
+
+    .faq .card .card-body {
+        background: #e9ecef;
+        color: #adb5bd;
+    }
+
+    @media (min-width: 767px) and (max-width: 991px) {
+        .faq .container .row .col-md-6 {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100% !important;
+        }
+    }
+
+
+/*====================================================
+                      GALLERY
+======================================================*/
+
+    .gallery {
+        background: #e9ecef;
+    }
+
+    .gallery .gallery-img {
+        margin: 0 10px;
+    }
+
+    .gallery .gallery-img img {
+        margin-bottom: 10px;
+        box-shadow: 2px 5px 5px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 7px;
+        height: 500px;
+    }
+
+
+/*====================================================
+                        DOWNLOAD
+======================================================*/
+
+    .download-app {
+        background: #ed1b2e;
+    }
+
+    .download-app h1,
+    .download-app p {
+        color: #fff;
+    }
+
+    .download-app .apple {
+        text-align: right;
+    }
+
+    .download-app .apple img {
+        height: 63px;
+    }
+
+    .download-app .android {
+        text-align: left;
+    }
+
+    .download-app .android img {
+        height: 63px;
+    }
+
+    @media (max-width: 767px) {
+        .download-app .apple {
+            text-align: center;
+        }
+        .download-app .apple img {
+            height: 63px;
+            margin-bottom: 30px;
+        }
+        .download-app .android {
+            text-align: center;
+        }
+        .download-app .android img {
+            height: 63px;
+        }
+    }
+
+    .download-app .device-container {
+        width: 300px;
+        max-height: 350px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+
+/*====================================================
+                      CONTACT
+======================================================*/
+
+    .contact .contact-cont {
+        margin: 0 auto 60px auto;
+        text-align: center;
+    }
+
+    .contact .contact-cont a {
+        text-decoration: none;
+    }
+
+    .contact .contact-cont img {
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    .contact .contact-cont h5 {
+        text-align: center;
+        color: #adb5bd;
+    }
+
+
+@media (min-width: 768px) {
+.carousel-multi-item-2 .col-md-3 {
+float: left;
+width: 30%;
+max-width: 100%; } }
+
+.carousel-multi-item-2 .card img {
+border-radius: 2px; }
+.carousel-item.active, .carousel-item-next, .carousel-item-prev {
+    display: -webkit-inline-box;
+    }
+div.cssbox {
+  display: inline-block;
+}
+
+span.cssbox_full {
+  z-index: 999;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s linear;
+}
+
+span.cssbox_full img {
+  position: fixed;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  max-height: 90%;
+  max-width: 90%;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px black;
+}
+
+a.cssbox_close,
+a.cssbox_prev,
+a.cssbox_next {
+  z-index: 999;
+  position: fixed;
+  text-decoration: none;
+  visibility: hidden;
+  color: white;
+  font-size: 36px;
+}
+
+a.cssbox_close {
+  top: 1%;
+  right: 1%;
+     margin-top: 90px;
+}
+
+a.cssbox_close::after {
+  content: '\00d7';
+}
+
+a.cssbox_prev,
+a.cssbox_next {
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+a.cssbox_prev {
+  left: 5%;
+}
+
+a.cssbox_next {
+  right: 5%;
+}
+
+a:target ~ a.cssbox_close,
+a:target ~ a.cssbox_prev,
+a:target ~ a.cssbox_next {
+  visibility: visible;
+}
+
+a:target > img.cssbox_thumb + span.cssbox_full {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+span.cssbox_full {
+  cursor: initial;
+}
+
+.descrip {
+
+    font-size: 12px;
+        font-weight: 700;
+}
+/*====================================================
+                      FOOTER
+======================================================*/
+
+    .footer .top-footer {
+        padding: 20px 0;
+        background: #adb5bd;
+    }
+
+    .footer .top-footer p {
+        margin: 0;
+        color: #6c757d;
+    }
