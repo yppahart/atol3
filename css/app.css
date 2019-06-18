@@ -411,8 +411,7 @@
     .app-about .app-about-cont.right {
         margin-left: 0;
         margin-right: 150px;
-        text-align: right;
-    }
+     }
 
     @media (max-width: 767px) {
         .app-about .row.first {
@@ -436,7 +435,6 @@
         .app-about .app-about-cont.right {
             margin-left: 0;
             margin: 50px auto;
-            text-align: right;
         }
         .app-about img.third {
             margin-top: 50px;
