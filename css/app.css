@@ -742,3 +742,6 @@ span.cssbox_full {
         font-size: 14px;
         color: #adb5bd
     }
+   .img-fluid {
+    background: #fff;
+}
