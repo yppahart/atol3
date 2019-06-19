@@ -30,7 +30,7 @@
 		styleForm: ' dark-space',
 
 		//** Иконка главной кнопки, которая вызывает другие кнопки
-		navBtnIcon: '<img src="/smartlid/img/line-menu.svg" height="18" width="18" alt="">',
+		navBtnIcon: '<i class="far fa-envelope"></i>',
 
 		//** Иконка кнопки, которая вызывает модальное окно с формой обратного звонка
 		callFormBtnIcon: '<img src="/smartlid/img/phone.svg" height="18" width="18" alt="">',
