@@ -39,25 +39,6 @@ License URL: https://creativecommons.org/licenses/by/4.0/
 
         <script src="js/jquery.min.js"></script>
         <script> $(window).on('load', function(){ $(".loader").fadeOut(2000); }); </script>
-       <script>
-            $(function ($) {
-        $.getScript('./smartlid/smartlid.js', function () {
-            $('body').smartLid({
-
-            });
-        });
-
-        function addStyle(href) {
-            elem = document.createElement("link");
-            elem.href = href;
-            elem.rel = 'stylesheet';
-            document.head.appendChild(elem);
-        }
-        addStyle('./smartlid/css/main.css');
-    }(jQuery));
-                
-       </script>
-
     </head>
 
     <body>
@@ -587,5 +568,24 @@ $.extend($.validator.messages, {
 
     })(document, window, "getSaleInit");
   </script>
-  <!-- GETSALE CODE END -->    </body>
+  <!-- GETSALE CODE END -->   
+       <script>
+            $(function ($) {
+        $.getScript('./smartlid/smartlid.js', function () {
+            $('body').smartLid({
+
+            });
+        });
+
+        function addStyle(href) {
+            elem = document.createElement("link");
+            elem.href = href;
+            elem.rel = 'stylesheet';
+            document.head.appendChild(elem);
+        }
+        addStyle('./smartlid/css/main.css');
+    }(jQuery));
+                
+       </script>
+   </body>
 </html>
