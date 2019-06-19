@@ -1,579 +1,739 @@
-@charset "UTF-8";
-/* Шрифт */
-@font-face {
-  font-family: 'Exo2R';
-  src: url("/smartlid/fonts/Exo2.eot");
-  src: url("/smartlid/fonts/Exo2.woff2") format("woff2"), url("/smartlid/fonts/Exo2.woff") format("woff"), url("/smartlid/fonts/Exo2.ttf") format("truetype"), url("/smartlid/fonts/Exo2.svg#ProximaNova-Regular") format("svg"), url("/smartlid/fonts/Exo2.eot?#iefix") format("embedded-opentype");
-  font-weight: normal;
-  font-style: normal; }
+// "use strict";
+(function ($) {
+	var defaults = {
+		//******************************* Общие настройки  *******************************
 
-@font-face {
-  font-family: 'Exo2B';
-  src: url("/smartlid/fonts/Exo2B.eot");
-  src: url("/smartlid/fonts/Exo2B.woff2") format("woff2"), url("/smartlid/fonts/Exo2B.woff") format("woff"), url("/smartlid/fonts/Exo2B.ttf") format("truetype"), url("/smartlid/fonts/Exo2B.svg#ProximaNova-Regular") format("svg"), url("/smartlid/fonts/Exo2B.eot?#iefix") format("embedded-opentype");
-  font-weight: normal;
-  font-style: normal; }
+		//** Включить форму обратного звонка? true|false
+		callForm: true,
 
-.smartlid {
-  position: fixed;
-  bottom: 20px; }
-  .smartlid_left {
-    left: 20px; }
-  .smartlid_left .smartlid__modal-buttons .smartlid__call-button {
-    margin-left: 10px; }
-  .smartlid_left .smartlid__modal-buttons .smartlid__request-button {
-    margin-left: 10px; }
-  .smartlid_left .smartlid__modal-buttons .smartlid__contact-button {
-    margin-left: 10px; }
-  .smartlid_right {
-    right: 20px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-flow: row-reverse;
-        -ms-flex-flow: row-reverse;
-            flex-flow: row-reverse; }
-  .smartlid_right .smartlid__modal-buttons {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -webkit-flex-flow: row-reverse;
-        -ms-flex-flow: row-reverse;
-            flex-flow: row-reverse; }
-  .smartlid_right .smartlid__modal-buttons .smartlid__call-button {
-    margin-right: 10px; }
-  .smartlid_right .smartlid__modal-buttons .smartlid__request-button {
-    margin-right: 10px; }
-  .smartlid_right .smartlid__modal-buttons .smartlid__contact-button {
-    margin-right: 10px; }
-  .smartlid_visible {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
-  .smartlid_hidden {
-    display: none; }
-  .smartlid__rings {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: auto;
-    width: auto;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
-    -webkit-animation-duration: 2.0s;
-            animation-duration: 2.0s;
-    -webkit-animation-name: smartlidRings;
-            animation-name: smartlidRings;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    z-index: -1; }
-  .smartlid__rings:nth-child(2) {
-    -webkit-animation-name: smartlidRings2;
-            animation-name: smartlidRings2; }
-  .smartlid__rings:nth-child(3) {
-    -webkit-animation-name: smartlidRings3;
-            animation-name: smartlidRings3; }
-  .smartlid__nav-button, .smartlid__call-button, .smartlid__request-button, .smartlid__contact-button {
-    color: #ed1b2f;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    padding: 0;
-    margin: 0;
-    border: none;
-    -webkit-border-radius: 50%;
-            border-radius: 50%;
-    cursor: pointer;
-    outline: none;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  .smartlid__modal-buttons {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    line-height: 0; }
-    .smartlid__modal-buttons_hidden {
-      visibility: hidden; }
-      .smartlid__modal-buttons_hidden .smartlid__call-button {
-        -webkit-transform: scale(0);
-            -ms-transform: scale(0);
-                transform: scale(0);
-        -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
-        -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
-        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s; }
-      .smartlid__modal-buttons_hidden .smartlid__request-button {
-        -webkit-transform: scale(0);
-            -ms-transform: scale(0);
-                transform: scale(0);
-        -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
-        -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
-        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s; }
-      .smartlid__modal-buttons_hidden .smartlid__contact-button {
-        -webkit-transform: scale(0);
-            -ms-transform: scale(0);
-                transform: scale(0);
-        -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
-        -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
-        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s; }
-    .smartlid__modal-buttons_open {
-      visibility: visible; }
-      .smartlid__modal-buttons_open .smartlid__call-button {
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-                transform: scale(1);
-        -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
-        -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s;
-        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.1s; }
-      .smartlid__modal-buttons_open .smartlid__request-button {
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-                transform: scale(1);
-        -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
-        -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s;
-        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.3s; }
-      .smartlid__modal-buttons_open .smartlid__contact-button {
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-                transform: scale(1);
-        -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
-        -o-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
-        transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s; }
-  .smartlid__modal {
-    position: fixed;
-    z-index: 150;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    -webkit-animation: smartLidModalOpen .3s linear;
-            animation: smartLidModalOpen .3s linear;
-    overflow: hidden; }
-    .smartlid__modal_open {
-      overflow-y: scroll;
-      -ms-overflow-style: none; }
-      .smartlid__modal_open::-webkit-scrollbar {
-        width: 0;
-        opacity: 0; }
-  .smartlid__form {
-    position: relative;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 100%;
-    max-width: 504px;
-    margin: 50px auto 0;
-    padding: 50px 100px; }
-    @media only screen and (max-width: 1366px) {
-      .smartlid__form {
-        margin: 15px auto 0;
-        padding: 30px 100px; } }
-    @media only screen and (max-width: 768px) {
-      .smartlid__form {
-        padding: 30px 15px;
-        max-width: 100%;
-        margin: 0 auto;
-        -webkit-box-shadow: none !important;
-                box-shadow: none !important; } }
-    .smartlid__form_open {
-      -webkit-animation: smartLidFormOpen .6s ease-in-out;
-              animation: smartLidFormOpen .6s ease-in-out; }
-  .smartlid__form-title {
-    margin: 0 0 20px;
-    font: 18px 'Exo2R', sans-serif;
-    text-align: center; }
-    @media only screen and (max-width: 1280px) {
-      .smartlid__form-title {
-        font-size: 16px; } }
-    @media only screen and (max-width: 768px) {
-      .smartlid__form-title {
-        max-width: 304px;
-        margin: 0 auto 15px; } }
-  .smartlid__preloader {
-    height: 2px;
-    width: 100%;
-    position: relative;
-    display: none;
-    margin-top: 10px; }
-    .smartlid__preloader:before {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      width: 50px;
-      height: 2px;
-      -webkit-animation: smartlidPreloader 3s infinite;
-              animation: smartlidPreloader 3s infinite; }
-  .smartlid__input {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    text-align: left;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0 15px;
-    height: 50px;
-    font: 16px 'Exo2R', sans-serif;
-    border: none;
-    outline: none; }
-    @media only screen and (max-width: 1366px) {
-      .smartlid__input {
-        margin-bottom: 15px;
-        height: 45px; } }
-    @media only screen and (max-width: 768px) {
-      .smartlid__input {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        max-width: 304px;
-        margin: 0 auto 15px; } }
-    .smartlid__input::-webkit-input-placeholder {
-      text-align: left !important; }
-    .smartlid__input::-moz-placeholder {
-      text-align: left !important; }
-    .smartlid__input:-ms-input-placeholder {
-      text-align: left !important; }
-    .smartlid__input::-ms-input-placeholder {
-      text-align: left !important; }
-    .smartlid__input::placeholder {
-      text-align: left !important; }
-    .smartlid__input_file {
-      display: none !important; }
-    .smartlid__input_text {
-      padding: 10px 15px;
-      resize: none; }
-  @media only screen and (max-width: 768px) {
-    .smartlid__checkbox-wrapper {
-      max-width: 304px;
-      margin: 0 auto; } }
-  .smartlid__checkbox_agreement {
-    display: none; }
-  .smartlid__label_agreement {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    text-align: left;
-    margin: 0 0 20px;
-    padding: 0 0 0 50px;
-    font: 16px 'Exo2R', sans-serif; }
-    @media only screen and (max-width: 1280px) {
-      .smartlid__label_agreement {
-        margin: -5px 0 15px; } }
-  .smartlid__label_agreement::before, .smartlid__label_agreement::after {
-    content: "";
-    position: absolute;
-    margin: 0;
-    outline: 0;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-        transform: translate(0, -50%);
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-  .smartlid__label_agreement::before {
-    left: 1px;
-    width: 34px;
-    height: 14px;
-    -webkit-border-radius: 8px;
-            border-radius: 8px; }
-  .smartlid__label_agreement::after {
-    left: 0;
-    width: 20px;
-    height: 20px;
-    -webkit-border-radius: 50%;
-            border-radius: 50%; }
-  .smartlid__checkbox_agreement:checked + .smartlid__label_agreement:after {
-    -webkit-transform: translate(80%, -50%);
-    -ms-transform: translate(80%, -50%);
-        transform: translate(80%, -50%); }
-  .smartlid__label_agreement .toggle--on {
-    display: none; }
-  .smartlid__label_agreement .toggle--off {
-    display: inline-block; }
-  .smartlid__checkbox_agreement:checked + .smartlid__label_agreement .toggle--on {
-    display: inline-block; }
-  .smartlid__checkbox_agreement:checked + .smartlid__label_agreement .toggle--off {
-    display: none; }
-  .smartlid__form-icon {
-    display: block;
-    width: 100px;
-    margin: 0 auto 30px; }
-    @media only screen and (max-width: 1280px) {
-      .smartlid__form-icon {
-        width: 70px;
-        margin-bottom: 15px; } }
-  .smartlid__form-button {
-    display: block;
-    width: 100%;
-    border: none;
-    height: 50px;
-    cursor: pointer;
-    outline: none;
-    font: 18px 'Exo2R', sans-serif; }
-    @media only screen and (max-width: 1366px) {
-      .smartlid__form-button {
-        height: 45px;
-        font-size: 16px; } }
-    @media only screen and (max-width: 768px) {
-      .smartlid__form-button {
-        max-width: 304px;
-        margin: 0 auto; } }
-  .smartlid__file-wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
-    @media only screen and (max-width: 768px) {
-      .smartlid__file-wrapper {
-        max-width: 304px;
-        margin: 0 auto; } }
-  .smartlid__file-name {
-    width: -webkit-calc(100% - 100px);
-    width: calc(100% - 100px);
-    -webkit-border-radius: 2px 0 0 2px;
-            border-radius: 2px 0 0 2px; }
-  .smartlid__label_file {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 50px;
-    width: 100px;
-    cursor: pointer;
-    -webkit-border-radius: 0 2px 2px 0;
-            border-radius: 0 2px 2px 0; }
-    @media only screen and (max-width: 1366px) {
-      .smartlid__label_file {
-        height: 45px; } }
-  .smartlid__close-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    font: 24px sans-serif;
-    cursor: pointer;
-    outline: none;
-    -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-    -o-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s; }
-    @media only screen and (max-width: 1280px) {
-      .smartlid__close-button {
-        right: 5px;
-        top: 5px; } }
-    .smartlid__close-button:hover {
-      -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-      -o-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-      transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
-      -webkit-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-              transform: rotate(90deg); }
+		//** Включить форму c отправкой сообщения? true|false
+		requestForm: true,
 
-@-webkit-keyframes smartlidRings {
-  from {
-    opacity: 1;
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8); }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.2, 1.2);
-            transform: scale(1.2, 1.2); } }
+		//** Включить форму c контактами? true|false !!! - пока недоступно
+		//** contactForm: false,
 
-@keyframes smartlidRings {
-  from {
-    opacity: 1;
-    -webkit-transform: scale(0.8, 0.8);
-            transform: scale(0.8, 0.8); }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.2, 1.2);
-            transform: scale(1.2, 1.2); } }
+		//** Расположение кнопок: smartlid_left | smartlid_right
+		position: ' smartlid_right',
 
-@-webkit-keyframes smartlidRings2 {
-  from {
-    opacity: 0.9;
-    -webkit-transform: scale(0.9, 0.9);
-            transform: scale(0.9, 0.9); }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.4, 1.4);
-            transform: scale(1.4, 1.4); } }
+		//** Отключить пульсирующие кнопки и оставить вызов модального окна только своими ссылками smartlid_visible | smartlid_hidden
+		isSmartlidVisible: 'smartlid_visible',
 
-@keyframes smartlidRings2 {
-  from {
-    opacity: 0.9;
-    -webkit-transform: scale(0.9, 0.9);
-            transform: scale(0.9, 0.9); }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.4, 1.4);
-            transform: scale(1.4, 1.4); } }
+		//** Отслеживание заполнение формы в целях Яндекс Метрики.
+		// XXXXXX - код счеткичка в Метрике
+		// SMARTLID - ID цели
 
-@-webkit-keyframes smartlidRings3 {
-  from {
-    opacity: 0.8;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.6, 1.6);
-            transform: scale(1.6, 1.6); } }
+		counter: function () {
+			yaCounter40976409.reachGoal('SMARTLID');
+		},
 
-@keyframes smartlidRings3 {
-  from {
-    opacity: 0.8;
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1); }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.6, 1.6);
-            transform: scale(1.6, 1.6); } }
+		//** Стилевое оформление формы 'dark-space', вскоре появятся и другие цвета
+		styleForm: ' dark-space',
 
-@-webkit-keyframes smartLidModalOpen {
-  0% {
-    -webkit-border-radius: 100%;
-            border-radius: 100%;
-    width: 320px;
-    height: 320px;
-    -webkit-transform: scale(2);
-            transform: scale(2); }
-  100% {
-    -webkit-border-radius: 100%;
-            border-radius: 100%;
-    width: 1000px;
-    height: 1000px;
-    -webkit-transform: scale(3);
-            transform: scale(3); } }
+		//** Иконка главной кнопки, которая вызывает другие кнопки
+		navBtnIcon: '<i class="fas fa-bars"></i>',
 
-@keyframes smartLidModalOpen {
-  0% {
-    -webkit-border-radius: 100%;
-            border-radius: 100%;
-    width: 320px;
-    height: 320px;
-    -webkit-transform: scale(2);
-            transform: scale(2); }
-  100% {
-    -webkit-border-radius: 100%;
-            border-radius: 100%;
-    width: 1000px;
-    height: 1000px;
-    -webkit-transform: scale(3);
-            transform: scale(3); } }
+		//** Иконка кнопки, которая вызывает модальное окно с формой обратного звонка
+		callFormBtnIcon: '<i class="fas fa-phone"></i>',
 
-@-webkit-keyframes smartLidFormOpen {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(550px);
-            transform: translateY(550px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px); } }
+		//** Иконка кнопки, которая вызывает модальное окно с формой отправки сообщения
+		requestFormBtnIcon: '<i class="fas fa-envelope"></i>',
 
-@keyframes smartLidFormOpen {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(550px);
-            transform: translateY(550px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px); } }
+		//** Placeholder для полей
+		placeholderName: 'Введите ваше имя',
+		placeholderPhone: 'Введите ваш телефон',
+		placeholderMail: 'Введите ваш email',
+		placeholderText: 'Введите ваше сообщение',
 
-.agreement-link {
-  text-decoration: none;
-  font: 12px 'Exo', sans-serif; }
-  .agreement-link:hover {
-    text-decoration: none; }
+		//** Checkbox согласия с разрешением на обработку персональных данных true|false
+		agreement: true,
 
-.smartlid__nav-button, .smartlid__call-button, .smartlid__request-button, .smartlid__contact-button, .smartlid__request-button::before, .smartlid__call-button::before {
-  background: #263238; }
+		//** Должен ли быть отмечен checkbox с разрешением на обработку персональных данных по умолчанию? true|false
+		agreementIsActive: true,
 
-.smartlid__request-button::before, .smartlid__call-button::before {
-  color: #e2e2e2; }
+		//** ССылка на лицензионное соглашение
+		agreementLink: '#',
 
-.smartlid__rings {
-  border: 1px solid rgba(0, 0, 0, 0.5); }
+		//******************************* Настройка автооткрытие формы *******************************
 
-.dark-space {
-  background: #263238; }
-  .dark-space .smartlid__form {
-    background: #263238;
-    -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5); }
-  .dark-space .smartlid__thank-title {
-    color: #e2e2e2; }
-  .dark-space .smartlid__form-title {
-    color: #e2e2e2; }
-  .dark-space .smartlid__form-button {
-    background: #16A085;
-    -webkit-border-radius: 2px;
-            border-radius: 2px;
-    color: #e2e2e2;
-    -webkit-transition: .4s;
-    -o-transition: .4s;
-    transition: .4s; }
-    .dark-space .smartlid__form-button:hover {
-      -webkit-transition: .4s;
-      -o-transition: .4s;
-      transition: .4s;
-      background: #2ABB9B;
-      -webkit-box-shadow: 0 3px 30px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 30px rgba(0, 0, 0, 0.2); }
-  .dark-space .smartlid__close-button {
-    color: #e2e2e2; }
-  .dark-space .smartlid__input {
-    background: #343f45;
-    -webkit-border-radius: 2px;
-            border-radius: 2px;
-    color: #e2e2e2; }
-    .dark-space .smartlid__input:focus {
-      color: #e2e2e2; }
-  .dark-space .smartlid__label_file {
-    background: #16A085;
-    color: #e2e2e2;
-    font: 16px 'Exo', sans-serif; }
-  .dark-space .smartlid__respond-fail {
-    color: #aa5050; }
-  .dark-space .smartlid__respond-success {
-    color: #16A085; }
-  .dark-space .smartlid__preloader {
-    background: #e2e2e2; }
-  .dark-space .smartlid__preloader:before {
-    background: mediumturquoise; }
-  .dark-space .smartlid__label_agreement:before {
-    background-color: #aa5050; }
-  .dark-space .smartlid__label_agreement:after {
-    background-color: #e2e2e2;
-    -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
-            box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084); }
-  .dark-space .smartlid__checkbox_agreement:checked + .smartlid__label_agreement:before {
-    background-color: #A5D6A7; }
-  .dark-space .smartlid__checkbox_agreement:checked + .smartlid__label_agreement:after {
-    background-color: #16A085; }
-  .dark-space .agreement-link {
-    color: #e2e2e2 !important; }
+		//** autoOpenForm - выбор формы для автооткрытия:
+
+		//--- 'callForm' - автооткрытие формы обратного звонка
+		//--- 'requestForm' - автооткрытие формы c отправкой сообщения
+		//--- false - выключить автооткрытие | без ковычек
+
+		autoOpenForm: false,
+
+		//** Время, через которое откроется модальое окно с формой, после загрузки страницы (в милличекундах). Минимум 3 секунды.
+		autoOpenTime: '9000',
+
+
+		//** Время (в часах), сколько окно не будет показываться, после первого показа или самостоятельного открытия окна пользователем.
+		autoOpenPeriodicity: '1',
+
+		//******************************* Настройка формы обратного звонка *******************************
+
+		//** Заголовок формы
+		callFormTitle: 'Оставьте номер телефона и мы перезвоним',
+
+		//** Текст кнопки отправляющей форму
+		buttonTextCallForm: 'Отправить',
+
+		//** Картинка в модальном окне
+		callFormIcon: '/smartlid/img/call.svg',
+
+		//** Включить поле с отправкой файла? true | false
+		callFormAddFile: false,
+
+
+		//******************************* Настройка формы с возможностью отправить сообщение *******************************
+
+		//** Заголовок формы
+		requestFormTitle: 'Оставьте сообщение, и наш консультант свяжется с вами',
+
+		//** Текст кнопки отправляющей форму
+		buttonTextRequestForm: 'Отправить',
+
+		//** Картинка в модальном окне с формой отправки заявки
+		requestFormIcon: '/smartlid/img/mail.svg',
+
+		//** Включить поле с отправкой файла? true | false
+		requestFormAddFile: false,
+
+		//** Включить поле с вводом телефона? true | false
+		requestFormTelInput: true,
+
+		//******************************* Недоступные для визуального редактора настройки *******************************
+
+		//** Сообщение при заполнении не всех обязательных полей
+		attantion: '<p class="smartlid__respond-fail">Внимание! Вы заполнили не все обязательные поля</p>',
+
+		//** Сообщение при ошибке отправки файла
+		failfile: '<p class="smartlid__respond-fail">Ошибка отправки файла, попробуйте еще раз</p>',
+
+		//** Сообщение при успешной отправке сообщения
+		successmsgs: '<p class="smartlid__respond-success">Спасибо за обращение. Сообщение успешно отправлено</p>',
+
+		//** Сообщение при неудачной отправке письма
+		failmsgs: '<p class="smartlid__respond-fail">Сообщение не отправлено, попробуйте еще раз</p>',
+
+		//** Текст ссылки лицензионного соглашения
+		agreementText: 'Я <span class="toggle--on">принимаю</span><span class="toggle--off">не принимаю</span> условия пользовательского соглашения',
+
+		//** Время указывающее за сколько до появления модального окна проверяется наличе метки в LS
+		checkLocalStorageTime: '1000',
+
+		//** Определение источника перехода
+		referrer: document.referrer,
+	};
+	var methods = {
+
+		init: function (options) {
+			var settings = $.extend(defaults, options);
+			methods.setRef();
+			return this.each(function () {
+				$(this).append(methods.showButtons());
+			});
+		},
+
+		setRef: function () {
+			if ((defaults.referrer).length) {
+				var ref = new URL(defaults.referrer);
+				if (location.host !== ref.host) {
+					localStorage.setItem('userRef', ref.host);
+				}
+			} else {
+				localStorage.setItem('userRef', 'Не удалось определить источник перехода на сайт');
+			}
+		},
+
+		createButtons: function () {
+
+			let smartLid = $('<div>').attr({
+				class: 'smartlid' + defaults.position + ' ' + defaults.isSmartlidVisible,
+			});
+
+			let smartLidRounds = $('<span>').attr({
+				class: 'smartlid__rings'
+			});
+
+			if (defaults.callForm && !defaults.requestForm && !defaults.contactForm) {
+
+				let smartLidNavButton = $('<button>').attr({
+					class: 'smartlid__call-button',
+				}).html(defaults.callFormBtnIcon);
+
+				smartLidNavButton.click(function () {
+					methods.showModal(methods.createCallForm().attr('class'));
+					$(this).attr("disabled", "disabled");
+					setTimeout(() => {
+						$(this).attr("disabled", false);
+					}, 3000);
+				});
+
+				smartLid.append(smartLidNavButton.append(smartLidRounds).append(smartLidRounds.clone()).append(smartLidRounds.clone()));
+
+			} else if (!defaults.callForm && defaults.requestForm && !defaults.contactForm) {
+				console.log('defaults.requestForm');
+
+				var smartLidNavButton = $('<button>').attr({
+					class: 'smartlid__request-button',
+				}).html(defaults.requestFormBtnIcon);
+
+				smartLidNavButton.click(function () {
+					methods.showModal(methods.createRequestForm().attr('class'));
+					$(this).attr("disabled", "disabled");
+					setTimeout(() => {
+						$(this).attr("disabled", false);
+					}, 3000);
+				});
+
+				smartLid.append(smartLidNavButton.append(smartLidRounds).append(smartLidRounds.clone()).append(smartLidRounds.clone()));
+
+			} else if (!defaults.callForm && !defaults.requestForm && defaults.contactForm) {
+				console.log('defaults.contactForm');
+			} else {
+
+				let smartLidNavButton = $('<button>').attr({
+					class: 'smartlid__nav-button',
+				}).html(defaults.navBtnIcon);
+
+				let smartLidModalButtons = $('<div>').attr({
+					class: 'smartlid__modal-buttons smartlid__modal-buttons_hidden'
+				});
+
+				if (defaults.callForm) {
+					let smartLidCallButton = $('<button>');
+					smartLidCallButton.attr({
+						class: 'smartlid__call-button',
+					}).html(defaults.callFormBtnIcon);
+					smartLidModalButtons.append(smartLidCallButton);
+
+					smartLidCallButton.click(function () {
+						methods.showModal(methods.createCallForm().attr('class'));
+						$(this).attr("disabled", "disabled");
+						setTimeout(() => {
+							$(this).attr("disabled", false);
+						}, 3000);
+					});
+				}
+
+				if (defaults.requestForm) {
+					let smartLidRequestButton = $('<button>');
+					smartLidModalButtons.append(smartLidRequestButton);
+					smartLidRequestButton.attr({
+						class: 'smartlid__request-button',
+					}).html(defaults.requestFormBtnIcon);
+
+					smartLidRequestButton.click(function () {
+						methods.showModal(methods.createRequestForm().attr('class'));
+						$(this).attr("disabled", "disabled");
+						setTimeout(() => {
+							$(this).attr("disabled", false);
+						}, 3000);
+					});
+				}
+
+				smartLidNavButton.click(function () {
+					smartLidModalButtons.toggleClass("smartlid__modal-buttons_open");
+					smartLidModalButtons.toggleClass("smartlid__modal-buttons_hidden");
+				});
+
+				smartLidRounds.appendTo(smartLidNavButton);
+				smartLidRounds.clone().appendTo(smartLidNavButton);
+				smartLidRounds.clone().appendTo(smartLidNavButton);
+
+
+				setTimeout(() => {
+					smartLid.append(smartLidNavButton).append(smartLidModalButtons);
+				}, 500);
+			}
+
+			if (defaults.callForm) {
+				$('.smartlid__call-button_custom').click(function () {
+					methods.showModal(methods.createCallForm().attr('class'));
+					$(this).attr("disabled", "disabled");
+					setTimeout(() => {
+						$(this).attr("disabled", false);
+					}, 3000);
+				});
+			}
+
+			if (defaults.requestForm) {
+				$('.smartlid__request-button_custom').click(function () {
+					methods.showModal(methods.createRequestForm().attr('class'));
+					$(this).attr("disabled", "disabled");
+					setTimeout(() => {
+						$(this).attr("disabled", false);
+					}, 3000);
+				});
+			}
+
+			function isNumber(n) {
+				return !isNaN(parseFloat(n)) && isFinite(n);
+			}
+			if(isNumber(defaults.autoOpenPeriodicity) && defaults.autoOpenForm) {
+				let  limit, localStorageInitTime, getStateTime;
+				if(defaults.autoOpenTime > 3000){
+					getStateTime = defaults.autoOpenTime - defaults.checkLocalStorageTime;
+				} else {
+					getStateTime = 2000;
+				}
+
+				setTimeout(() => {
+					limit = defaults.autoOpenPeriodicity * 3600 * 1000;
+					localStorageInitTime = localStorage.getItem('sLlocalStorageInitTime');
+
+					if (localStorageInitTime === null) {
+						localStorage.setItem('sLlocalStorageInitTime', +new Date());
+						methods.autoOpenModal(defaults.checkLocalStorageTime);
+					} else if(+new Date() - localStorageInitTime > limit){
+						localStorage.clear();
+						localStorage.setItem('localStorageInitTime', +new Date());
+						methods.autoOpenModal(defaults.checkLocalStorageTime);
+					}
+				}, getStateTime);
+			}
+
+			return smartLid;
+		},
+
+		createModal: function (params) {
+
+			let smartLidModal = $('<div>').attr({
+				class: 'smartlid__modal' + defaults.styleForm,
+			});
+
+			if (params == methods.createCallForm().attr('class')) {
+				setTimeout(function () {
+					smartLidModal.fadeIn(function () {
+						$(this).append(methods.createCallForm().addClass('smartlid__form_open').append(methods.closeModal(smartLidModal)));
+					});
+				}, 500);
+			}
+
+			setTimeout(() => {
+				smartLidModal.addClass('smartlid__modal_open');
+			}, 1000);
+
+			if (params == methods.createRequestForm().attr('class')) {
+				setTimeout(function () {
+					smartLidModal.fadeIn(function () {
+						$(this).append(methods.createRequestForm().addClass('smartlid__form_open').append(methods.closeModal(smartLidModal)));
+					});
+				}, 500);
+			}
+
+			return smartLidModal;
+		},
+
+		closeModal: function (smartLidModal) {
+
+			let smartLidCloseButton = $('<button>').attr({
+				class: 'smartlid__close-button',
+			}).html('×');
+
+			smartLidCloseButton.click(function (event) {
+				event.preventDefault();
+				smartLidModal.fadeOut(function () {
+					$(this).remove();
+				});
+				// $('.smartlid__call-button').attr("disabled", false);
+			});
+
+			$(smartLidModal).mouseup(function (e) {
+				var div = $(".smartlid__form");
+				if (!div.is(e.target) &&
+					div.has(e.target).length === 0) {
+					smartLidModal.fadeOut(function () {
+						$(this).remove();
+					});
+				}
+			});
+
+			return smartLidCloseButton;
+		},
+
+		initLocalStorage: function() {
+			if(defaults.autoOpenForm) {
+				let  limit = defaults.autoOpenPeriodicity * 3600 * 1000;
+				let localStorageInitTime = localStorage.getItem('sLlocalStorageInitTime');
+					if (localStorageInitTime === null) {
+						localStorage.setItem('sLlocalStorageInitTime', +new Date());
+					} else if(+new Date() - localStorageInitTime > limit){
+				localStorage.clear();
+				localStorage.setItem('localStorageInitTime', +new Date());
+			}
+			}
+			
+		},
+
+		autoOpenModal: function (openTime) {
+			if(defaults.callForm && defaults.autoOpenForm === 'callForm') {
+				setTimeout(() => {
+					methods.showModal(methods.createCallForm().attr('class'));
+				}, openTime);
+			}
+			if(defaults.requestForm && defaults.autoOpenForm === 'requestForm') {
+				setTimeout(() => {
+					methods.showModal(methods.createRequestForm().attr('class'));
+				},  openTime);
+			}
+		},
+
+		createCallForm: function () {
+			let callForm = $('<form>').attr({
+				class: 'smartlid__form smartlid__form_call',
+				method: 'POST',
+				id: 'callForm',
+				autocomplete: 'off',
+				enctype: 'multipart/form-data',
+			});
+
+			let formImages = $('<img>').attr({
+				class: 'smartlid__form-icon',
+				alt: 'Обратный звонок',
+				src: defaults.callFormIcon,
+				width: 100,
+			});
+
+			let formTitle = $('<div>').attr({
+				class: 'smartlid__form-title'
+			})
+				.append($('<p>').attr({
+					class: 'smartlid__default-msgs'
+				}).html(defaults.callFormTitle))
+				.append($('<div>').attr({
+					class: 'smartlid__respond-msgs'
+				}))
+				.append($('<div>').attr({
+					class: 'smartlid__preloader'
+				}));
+
+			let inpName = $('<input>').attr({
+				class: 'smartlid__input smartlid__input_name',
+				type: 'text',
+				name: 'name',
+				placeholder: defaults.placeholderName,
+			});
+
+			let inpTel = $('<input>').attr({
+				class: 'smartlid__input smartlid__input_tel',
+				type: 'tel',
+				name: 'tel',
+				placeholder: defaults.placeholderPhone,
+			});
+
+			let inpRef = $('<input>').attr({
+				class: 'smartlid__input smartlid__input_ref',
+				type: 'hidden',
+				name: 'ref',
+				value: localStorage.getItem('userRef'),
+			});
+
+
+			if (defaults.agreement) {
+				var checkboxWrapper = $('<div>').attr({
+					class: 'smartlid__checkbox-wrapper'
+				});
+
+				var inpCheckbox = $('<input>').attr({
+					class: 'smartlid__checkbox smartlid__checkbox_agreement',
+					type: 'checkbox',
+					name: 'agreement',
+					id: 'smartlid__checkbox_agreement',
+					value: 'Принимаю',
+					checked: defaults.agreementIsActive,
+				});
+
+				let inputCheckboxLabel = $('<label>').attr({
+					for: 'smartlid__checkbox_agreement',
+					class: 'smartlid__label smartlid__label_agreement'
+				});
+
+				let checkboxLink = $('<a>').attr({
+					class: 'agreement-link',
+					href: defaults.agreementLink,
+					target: '_blank'
+
+				}).html(defaults.agreementText);
+
+				checkboxWrapper.append(inpCheckbox).append(inputCheckboxLabel.append(checkboxLink));
+			}
+
+			if (defaults.callFormAddFile) {
+				var fileWrapper = $('<div>').attr({
+					class: 'smartlid__file-wrapper'
+				});
+				var fileName = $('<input>').attr({
+					class: 'smartlid__input smartlid__file-name',
+					placeholder: 'Прикрепить файл',
+					disabled: 'disabled',
+				});
+				let inputFileLabel = $('<label>').attr({
+					for: 'smartlid__input_file',
+					class: 'smartlid__label smartlid__label_file'
+				}).html('Выбрать');
+
+				let inpFile = $('<input>').attr({
+					class: 'smartlid__input smartlid__input_file',
+					type: 'file',
+					name: 'files[]',
+					id: 'smartlid__input_file'
+				}).change(function () {
+					fileName.val($(this).val().replace(/.*\\/, ""));
+				});
+				fileWrapper.append(fileName).append(inputFileLabel).append(inpFile);
+			}
+
+			let formButton = $('<button>').attr({
+				class: 'smartlid__form-button',
+				type: 'submit',
+				name: 'sendingForm'
+			}).html(defaults.buttonTextCallForm);
+
+			formButton.click(function (event) {
+				event.preventDefault();
+				if (defaults.agreement) {
+					if (inpCheckbox.is(":checked")) {
+						methods.sendMail($(callForm).attr('id'));
+					} else {
+						formTitle.find('.smartlid__default-msgs').css('display', 'none');
+						formTitle.find('.smartlid__respond-msgs').html('<p class="smartlid__respond-fail">Вы не приняли условия пользовательского соглашения</p>');
+						setTimeout(() => {
+							formTitle.find('.smartlid__default-msgs').css('display', 'block');
+							formTitle.find('.smartlid__respond-msgs').html('');
+						}, 4000);
+					}
+				} else {
+					methods.sendMail($(callForm).attr('id'));
+				}
+
+			});
+
+			callForm.append(formImages).append(formTitle).append(inpName).append(inpTel).append(inpRef).append(fileWrapper).append(checkboxWrapper).append(formButton);
+
+			return callForm;
+		},
+
+		createRequestForm: function () {
+			let requestForm = $('<form>').attr({
+				class: 'smartlid__form smartlid__form_request',
+				method: 'POST',
+				id: 'requestForm',
+				autocomplete: 'off',
+				enctype: 'multipart/form-data'
+			});
+
+			let formImages = $('<img>').attr({
+				class: 'smartlid__form-icon',
+				alt: 'Форма обратной связи',
+				src: defaults.requestFormIcon,
+				width: 100,
+			});
+
+			let formTitle = $('<div>').attr({
+				class: 'smartlid__form-title'
+			})
+				.append($('<p>').attr({
+					class: 'smartlid__default-msgs'
+				}).html(defaults.requestFormTitle))
+				.append($('<div>').attr({
+					class: 'smartlid__respond-msgs'
+				}))
+				.append($('<div>').attr({
+					class: 'smartlid__preloader'
+				}));
+
+			let inpName = $('<input>').attr({
+				class: 'smartlid__input smartlid__input_name',
+				type: 'text',
+				name: 'name',
+				placeholder: defaults.placeholderName,
+			});
+			if (defaults.requestFormTelInput) {
+				var inpTel = $('<input>').attr({
+					class: 'smartlid__input smartlid__input_tel',
+					type: 'tel',
+					name: 'tel',
+					placeholder: defaults.placeholderPhone,
+				});
+			}
+
+
+			let inpMail = $('<input>').attr({
+				class: 'smartlid__input smartlid__input_mail',
+				type: 'email',
+				name: 'email',
+				placeholder: defaults.placeholderMail,
+			});
+
+			let inpText = $('<textarea>').attr({
+				class: 'smartlid__input smartlid__input_text',
+				placeholder: defaults.placeholderText,
+				name: 'text'
+			});
+
+			let inpRef = $('<input>').attr({
+				class: 'smartlid__input smartlid__input_ref',
+				type: 'hidden',
+				name: 'ref',
+				value: localStorage.getItem('userRef'),
+			});
+
+			if (defaults.agreement) {
+				var checkboxWrapper = $('<div>').attr({
+					class: 'smartlid__checkbox-wrapper'
+				});
+
+				var inpCheckbox = $('<input>').attr({
+					class: 'smartlid__checkbox smartlid__checkbox_agreement',
+					type: 'checkbox',
+					name: 'agreement',
+					value: 'Принимаю',
+					id: 'smartlid__checkbox_agreement',
+					checked: defaults.agreementIsActive,
+				});
+
+				let inputCheckboxLabel = $('<label>').attr({
+					for: 'smartlid__checkbox_agreement',
+					class: 'smartlid__label smartlid__label_agreement'
+				});
+
+				let checkboxLink = $('<a>').attr({
+					class: 'agreement-link',
+					href: defaults.agreementLink,
+					target: '_blank'
+
+				}).html(defaults.agreementText);
+
+				checkboxWrapper.append(inpCheckbox).append(inputCheckboxLabel.append(checkboxLink));
+			}
+
+			if (defaults.requestFormAddFile) {
+				var fileWrapper = $('<div>').attr({
+					class: 'smartlid__file-wrapper'
+				});
+				var fileName = $('<input>').attr({
+					class: 'smartlid__input smartlid__file-name',
+					placeholder: 'Прикрепить файл',
+					disabled: 'disabled',
+				});
+				let inputFileLabel = $('<label>').attr({
+					for: 'smartlid__input_file',
+					class: 'smartlid__label smartlid__label_file'
+				}).html('Выбрать');
+
+				let inpFile = $('<input>').attr({
+					class: 'smartlid__input smartlid__input_file',
+					type: 'file',
+					name: 'files[]',
+					id: 'smartlid__input_file'
+				}).change(function () {
+					fileName.val($(this).val().replace(/.*\\/, ""));
+				});
+				fileWrapper.append(fileName).append(inputFileLabel).append(inpFile);
+			}
+
+
+			let formButton = $('<button>').attr({
+				class: 'smartlid__form-button',
+				type: 'submit',
+				name: 'sendingForm'
+			}).html(defaults.buttonTextRequestForm);
+
+			formButton.click(function (event) {
+				event.preventDefault();
+				if (defaults.agreement) {
+					if (inpCheckbox.is(":checked")) {
+						methods.sendMail($(requestForm).attr('id'));
+					} else {
+						formTitle.find('.smartlid__default-msgs').css('display', 'none');
+						formTitle.find('.smartlid__respond-msgs').html('<p class="smartlid__respond-fail">Вы не приняли условия пользовательского соглашения</p>');
+						setTimeout(() => {
+							formTitle.find('.smartlid__default-msgs').css('display', 'block');
+							formTitle.find('.smartlid__respond-msgs').html('');
+						}, 4000);
+					}
+				} else {
+					methods.sendMail($(requestForm).attr('id'));
+				}
+
+			});
+
+			requestForm.append(formImages).append(formTitle).append(inpName).append(inpTel).append(inpMail).append(inpRef).append(fileWrapper).append(inpText).append(checkboxWrapper).append(formButton);
+
+			return requestForm;
+		},
+
+		sendMail: function (formid) {
+			var formId = "#" + formid;
+			var fd = new FormData(document.querySelector(formId));
+			$.ajax({
+				url: "/smartlid/php/smartlid.php",
+				type: "POST",
+				data: fd,
+				processData: false,
+				contentType: false,
+				beforeSend: function () {
+
+					$(formId).find('.smartlid__preloader').css('display', 'block');
+					$(formId).find('.smartlid__default-msgs').css('display', 'none');
+					$(formId).find('.smartlid__form-button').prop('disabled', true);
+					$(formId).find('.smartlid__respond-msgs').html('Отправка письма');
+				},
+				success: function (data) {
+					$(formId).find('.smartlid__preloader').css('display', 'none');
+					switch (data) {
+						case 'attantion':
+							$(formId).find('.smartlid__respond-msgs').html('').append(defaults.attantion);
+							break;
+						case 'successmsgs':
+							$(formId).find('.smartlid__respond-msgs').html('').append(defaults.successmsgs);
+							break;
+						case 'failmsgs':
+							$(formId).find('.smartlid__respond-msgs').html('').append(defaults.failmsgs);
+							break;
+						case 'failfile':
+							$(formId).find('.smartlid__respond-msgs').html('').append(defaults.failfile);
+							break;
+					}
+
+					setTimeout(() => {
+						$(formId).find('.smartlid__default-msgs').css('display', 'block');
+						$(formId).find('.smartlid__respond-msgs').html('');
+						$(formId).find('.smartlid__form-button').prop("disabled", false);
+
+					}, 4000);
+
+				},
+				complete: function (data) {
+					if (data.responseText == 'successmsgs') {
+						$(formId).find($('input').not(':input[type=hidden]')).val('');
+						$(formId).find($('textarea').val(''));
+					}
+					defaults.counter();
+				},
+
+			});
+		},
+
+		showModal: function (formClass) {
+			methods.initLocalStorage();
+			return $('body').append(methods.createModal(formClass));
+		},
+
+		showButtons: function () {
+
+			return methods.createButtons();
+		},
+	};
+	$.fn.smartLid = function (method) {
+		if (methods[method]) {
+			return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+		} else if (typeof method === 'object' || !method) {
+			return methods.init.apply(this, arguments);
+		} else {
+			$.error('Метод ' + method + ' не найден');
+		}
+	};
+}(jQuery));
