@@ -79,7 +79,7 @@
 		buttonTextCallForm: 'Отправить',
 
 		//** Картинка в модальном окне
-		callFormIcon: '/smartlid/img/call.svg',
+		callFormIcon: '<i class="fas fa-phone"></i>',
 
 		//** Включить поле с отправкой файла? true | false
 		callFormAddFile: false,
@@ -94,7 +94,7 @@
 		buttonTextRequestForm: 'Отправить',
 
 		//** Картинка в модальном окне с формой отправки заявки
-		requestFormIcon: '/smartlid/img/mail.svg',
+		requestFormIcon: '<i class="fas fa-envelope"></i>',
 
 		//** Включить поле с отправкой файла? true | false
 		requestFormAddFile: false,
