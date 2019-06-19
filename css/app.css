@@ -127,14 +127,14 @@
         font-family: 'Lato', sans-serif;
     }
 
-    .btn-white {
+    .btn-white, .smartlid__call-button_custom {
         border-color: #ed1b2e;
         background-color: #ed1b2e;
         color: #fff;
     }
 
-    .btn-white:hover,
-    .btn-white:focus {
+    .btn-white, .smartlid__call-button_custom:hover,
+    .btn-white, .smartlid__call-button_custom:focus {
         background-color: transparent;
         color: #ed1b2e;
         cursor: pointer;
@@ -744,5 +744,8 @@ span.cssbox_full {
     }
    .img-fluid {
     background: #fff;
+}
+.smartlid__request-button{
+    color: #ed1b2e;
 }
 
