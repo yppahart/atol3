@@ -35,9 +35,28 @@ License URL: https://creativecommons.org/licenses/by/4.0/
         <link rel="stylesheet" href="css/animate.min.css">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/app.css">
+        <link href="smartlid/css/style.css" type="text/css" rel="stylesheet">
 
         <script src="js/jquery.min.js"></script>
         <script> $(window).on('load', function(){ $(".loader").fadeOut(2000); }); </script>
+       <script>
+            $(function ($) {
+        $.getScript('./smartlid/smartlid.js', function () {
+            $('body').smartLid({
+
+            });
+        });
+
+        function addStyle(href) {
+            elem = document.createElement("link");
+            elem.href = href;
+            elem.rel = 'stylesheet';
+            document.head.appendChild(elem);
+        }
+        addStyle('./smartlid/css/main.css');
+    }(jQuery));
+                
+       </script>
 
     </head>
 
@@ -132,7 +151,7 @@ License URL: https://creativecommons.org/licenses/by/4.0/
                         <img src="img/36.png" style="width: 70px;height: auto;">
                         <img src="img/ex.png" style="width: 70px;height: auto;">
                       </p>
-                                            <a href="#download"><button  class="btn btn-white mt-4 py-2 px-3 ">получить консультацию</button></a>
+                                            <a href="#download"><button  class="btn btn-red mt-4 py-2 px-3 ">получить консультацию</button></a>
 
                       <p>
                     </p>
