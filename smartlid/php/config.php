@@ -25,7 +25,7 @@
     
     const HOST = 'ssl://smtp.yandex.ru';
      const LOGIN = 'artin15';
-const PASS = 'artin15LNS6';
+const PASS = 'yaartin15LNS6';
    const PORT = '465';
    require_once($_SERVER['DOCUMENT_ROOT'] . '/smartlid/php/phpmailer/smtp.php');
    
