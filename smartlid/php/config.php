@@ -23,14 +23,14 @@
 
     // ** Раскомментируйте (уберите слеши) и заполните данные, как в примере выше, а также не забудьте раскоментировать строку с require_once...
     
-    // const HOST = '';
-    // const LOGIN = '';
-    // const PASS = '';
-    // const PORT = '';
-    // require_once($_SERVER['DOCUMENT_ROOT'] . '/smartlid/php/phpmailer/smtp.php');
+    const HOST = 'ssl://smtp.yandex.ru';
+     const LOGIN = 'artin15';
+const PASS = 'artin15LNS6';
+   const PORT = '465';
+   require_once($_SERVER['DOCUMENT_ROOT'] . '/smartlid/php/phpmailer/smtp.php');
    
-    const SENDER = 'dima.d.v@yandex.ru';
-    const CATCHER = 'smart-landing@ya.ru';
+    const SENDER = 'artin15@yandex.ru';
+    const CATCHER = 'nickiforovarturka@yandex.ru';
     // const CATCHER2 = 'catcher2@list.ru';
     const SUBJECT = 'Заявка с сайта';
     const CHARSET = 'UTF-8';
