@@ -30,13 +30,13 @@
 		styleForm: ' dark-space',
 
 		//** Иконка главной кнопки, которая вызывает другие кнопки
-		navBtnIcon: '<i class="far fa-envelope"></i>',
+		navBtnIcon: '<i class="fas fa-bars"></i>',
 
 		//** Иконка кнопки, которая вызывает модальное окно с формой обратного звонка
-		callFormBtnIcon: '<img src="/smartlid/img/phone.svg" height="18" width="18" alt="">',
+		callFormBtnIcon: '<i class="fas fa-phone"></i>',
 
 		//** Иконка кнопки, которая вызывает модальное окно с формой отправки сообщения
-		requestFormBtnIcon: '<img src="/smartlid/img/envelope.svg" height="18" width="18" alt="">',
+		requestFormBtnIcon: '<i class="fas fa-envelope"></i>',
 
 		//** Placeholder для полей
 		placeholderName: 'Введите ваше имя',
