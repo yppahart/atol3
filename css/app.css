@@ -376,6 +376,8 @@ html{
 
     .app-about .app-about-cont {
         margin-left: 150px;
+        padding-top: 50px;
+    padding-bottom: 50px;
     }
 
     .app-about .app-about-cont i {
