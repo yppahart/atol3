@@ -12,6 +12,24 @@ Explore
 0 0 yppahart/atol3
  Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
 atol3/css/bootstrap.css
+@yppahart yppahart Update bootstrap.css
+bf82e4f on 13 Jun
+6058 lines (5356 sloc)  149 KB
+    
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@yppahart 
+0
+0 0 yppahart/atol3
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
+atol3/css/bootstrap.css
 @yppahart yppahart Add files via upload
 8035142 14 days ago
 6028 lines (5330 sloc)  148 KB
@@ -119,7 +137,10 @@ ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-bottom: 0; }
+  margin-bottom: 0; 
+        color: #adb5bd;
+        text-align: -webkit-left;
+}
 
 dt {
   font-weight: 700; }
@@ -6043,6 +6064,18 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important; } }
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
 © 2019 GitHub, Inc.
 Terms
 Privacy
