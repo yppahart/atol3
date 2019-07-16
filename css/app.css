@@ -756,7 +756,7 @@ span.cssbox_full {
     color: #ed1b2e;
 }
 
-.ul {
+.ul, .li {
 
         color: #adb5bd;
         text-align: -webkit-left;
