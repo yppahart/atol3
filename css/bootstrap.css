@@ -131,7 +131,11 @@ ol,
 ul,
 dl {
   margin-top: 0;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem; 
+
+        color: #adb5bd;
+        text-align: -webkit-left;
+        }
 
 ol ol,
 ul ul,
