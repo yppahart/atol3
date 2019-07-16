@@ -756,3 +756,8 @@ span.cssbox_full {
     color: #ed1b2e;
 }
 
+.ul {
+
+        color: #adb5bd;
+        text-align: -webkit-left;
+}
