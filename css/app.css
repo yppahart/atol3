@@ -747,7 +747,7 @@ span.cssbox_full {
     }
     .blockquote {
         font-size: 14px;
-        color: #adb5bd
+        color: rgb(0, 0, 0);
     }
    .img-fluid {
     background: #fff;
