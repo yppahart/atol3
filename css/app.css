@@ -15,11 +15,11 @@ html{
     }
 
     a {
-        color: #ed1b2e;
+        color: rgb(0, 0, 0);
     }
 
     a:hover {
-        color: #0cceed;
+        color: rgb(0, 0, 0);
     }
 
     .text-primary {
@@ -380,17 +380,16 @@ html{
     }
 
     .app-about .app-about-cont i {
-        font-size: 20px;
-        margin-bottom: 15px;
-        border: 1px solid #dee2e6;
-        border-radius: 50%;
-        height: 38px;
-        width: 38px;
-        line-height: 38px;
-        text-align: center;
-        box-shadow: 0px 0px 14px -1px rgba(101, 99, 99, 0.35);
-        color: #ed1b2e;
-    }
+font-size: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 40%;
+    height: 70px;
+    width: 50px;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0px 0px 14px -1px rgba(101, 99, 99, 0.35);
+    color: #ed1b2e;    }
 
     .app-about .app-about-cont h3 {
         color: #6c757d;
