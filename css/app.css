@@ -500,7 +500,9 @@ font-size: 30px;
     .our-process .service-desc-cont p {
         color: rgb(0, 0, 0);
     }
-
+.fotorama__nav-wrap {
+    padding-top: 35px;
+}
 
 /*====================================================
                       FAQ
