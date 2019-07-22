@@ -212,7 +212,7 @@ html{
             -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
             transition: padding-top 0.3s, padding-bottom 0.3s;
             border: none;
-            background-color: rgba(0,0,0,0);
+            background-color: #FFF;
         }
         #mainNav .navbar-brand {
             font-size: 2.15em;
@@ -747,8 +747,8 @@ span.cssbox_full {
 
 @media (max-width: 360px) {
  .fotorama{
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
   }
 }
 /*====================================================
