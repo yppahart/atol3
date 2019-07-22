@@ -375,8 +375,7 @@ html{
 
     .app-about .app-about-cont {
         margin-left: 150px;
-        padding-top: 50px;
-    padding-bottom: 50px;
+     padding-bottom: 50px;
     text-align: center;
     }
 
@@ -741,6 +740,16 @@ span.cssbox_full {
 
     font-size: 12px;
         font-weight: 700;
+}
+.icon {
+    padding-right: 20px;
+}
+
+@media (max-width: 360px) {
+ .fotorama{
+    width: 50%;
+    height: 50%;
+  }
 }
 /*====================================================
                       FOOTER
