@@ -227,7 +227,7 @@ html{
         #mainNav.navbar-shrink {
             padding-top: 0;
             padding-bottom: 0;
-            background-color: #f8f9fa;
+            background-color: #fff;
             box-shadow: 0px 1px 5px 1px rgba(179, 174, 174, 0.5);
         }
         #mainNav.navbar-shrink .navbar-brand {
