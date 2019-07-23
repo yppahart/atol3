@@ -142,7 +142,7 @@ html{
 
     .btn-white, .smartlid__call-button_custom:hover,
     .btn-white, .smartlid__call-button_custom:focus {
-        background-color: transparent;
+        background-color: #ed1b2e;
         color: #ed1b2e;
         cursor: pointer;
     }
