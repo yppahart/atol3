@@ -294,6 +294,8 @@ html{
     section.masthead .header-content {
         max-width: 500px;
         text-align: center;
+        background-color: rgba(0, 0, 0, 0.44);
+        padding: 20px;
     }
 
     section.masthead .device-mockup.iphone6_plus.portrait.white>.device,
