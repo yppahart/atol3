@@ -202,7 +202,7 @@ html{
         font-weight: 400;
         padding: 0.75em 0;
         letter-spacing: 1px;
-        color: white;
+        color: #FFF;
     }
 
     @media (min-width: 992px) {
@@ -212,7 +212,7 @@ html{
             -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
             transition: padding-top 0.3s, padding-bottom 0.3s;
             border: none;
-            background-color: #FFF;
+            background-color: rgba(0,0,0,0);
         }
         #mainNav .navbar-brand {
             font-size: 2.15em;
