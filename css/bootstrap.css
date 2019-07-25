@@ -126,7 +126,10 @@ address {
   margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit; }
-
+ul > li > span
+{
+    color: rgb(0, 0, 0);
+}
 ol,
 ul,
 dl {
@@ -141,7 +144,7 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0; 
-        color: rgb(0, 0, 0);
+        color: #ed1b2e;
         text-align: -webkit-left;
 }
 
