@@ -198,7 +198,12 @@ a:not([href]):not([tabindex]) {
     text-decoration: none; }
   a:not([href]):not([tabindex]):focus {
     outline: 0; }
-
+    #advantages:before {
+	display: block;
+	content: "";
+	height: 55px;
+	margin: -55px 0 0;
+}
 pre,
 code,
 kbd,
