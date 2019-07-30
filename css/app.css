@@ -197,7 +197,8 @@ color: #FFFF;
     }
 
     #mainNav .navbar-brand img {
-        max-height: 65px;
+         background-color: #fff;
+             max-height: 80px;
     }
 
     #mainNav .navbar-nav .nav-item .nav-link {
